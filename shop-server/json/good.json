@@ -1,0 +1,95 @@
+[
+    {
+        "id":0,
+        "name":"生鲜",
+        "src":"https://m.360buyimg.com/babel/jfs/t1/203075/23/12183/153389/61703889E4f9943d3/3c1bc5b5f9e2f274.png",
+        "saleInfo":"3折狂砍",
+        "children":[
+            {"id":0,"name":"海鲜"},
+            {"id":1,"name":"水果"},
+            {"id":2,"name":"蔬菜"},
+            {"id":3,"name":"水产"},
+            {"id":4,"name":"禽肉"},
+            {"id":5,"name":"冷冻"}
+        ],
+        "goods":[
+            {"id":0,"name":"名鲜旗舰店进口雪花牛肉澳洲和牛M8M9+级上脑边 新鲜原切雪花牛排 ","desc":"生鲜肉","price":38.00,"src":"http://img.alicdn.com/bao/uploaded/i1/896713595/O1CN01sDNOyO1cQYY8zPefT_!!896713595.jpg"},
+            {"id":1,"name":"三都港 冷冻无公害黄花鱼 700g 2条 袋装 ","desc":"海鲜水产","price":56.60,"src":"http://img12.360buyimg.com/babel/s300x300_jfs/t3805/133/325945617/116002/e90e0bdf/580df2b5Ncb04c5ac.jpg"},
+            {"id":2,"name":"爱奇果 新疆库尔勒香梨 总重量约2.5kg 精选特级大果 ","desc":"新鲜水果","price":69.80,"src":"http://img10.360buyimg.com/babel/s300x300_jfs/t8212/335/867296173/346941/42857e6f/59b0afceNd7a1adfa.jpg"},
+            {"id":3,"name":"【秒杀.158元】美享时刻 手工整切牛排套餐10片进口S级牛肉微腌黑椒西冷菲力儿童牛扒 ","desc":"生鲜肉","price":129.00,"src":"http://img13.360buyimg.com/babel/s300x300_jfs/t18910/185/1403659361/253704/ece62066/5ac74859Nd2ba4167.jpg"},
+            {"id":4,"name":"花糯玉米10支玉米真空非转基因笨玉米黄粘玉米早餐黄玉米 箱","desc":"新鲜蔬菜","price":22.80,"src":"http://img12.360buyimg.com/babel/s300x300_jfs/t23692/263/791207810/749390/808164fa/5b4404e4N107b96fd.png"},
+            {"id":5,"name":"哈尔滨特产 风味红肠香肠 哈尔滨红肠 110g*3支","desc":"冷冻食品","price":39.00,"src":"http://img11.360buyimg.com/babel/s300x300_jfs/t17401/116/1865987770/256360/e86ddcb8/5ad99c61N1c89b268.jpg"},
+            {"id":6,"name":"恒都 眼肉原切牛排 450g/袋 3片装 原切牛肉 谷饲300天","desc":"生鲜肉","price":89.90,"src":"http://img10.360buyimg.com/babel/s300x300_jfs/t18853/196/1687780183/104391/a28ee779/5ad4592bN3bb09dcd.jpg"},
+            {"id":7,"name":"【加冰顺丰空运】2019新鲜太空水果莲蓬 洪湖新鲜莲蓬 嫩莲蓬鲜莲子带莲蓬 现摘现发2斤装包邮","desc":"新鲜蔬菜","price":89.80,"src":"http://img11.360buyimg.com/babel/s300x300_jfs/t22645/355/382835194/212499/d99ca953/5b2e0295N6f76386b.jpg"}
+        ]
+    },
+    {
+        "id":1,
+        "name":"居家",
+        "src":"http://img10.360buyimg.com/babel/s400x840_jfs/t1/4664/34/2914/78783/5b97afe5Ebd41d3aa/a0bd13ff2b7fc52a.jpg",
+        "saleInfo":"下单立减",
+        "children":[
+            {"id":0,"name":"家纺"},
+            {"id":1,"name":"收纳用品"},
+            {"id":2,"name":"生活日用"},
+            {"id":3,"name":"家装软饰"},
+            {"id":4,"name":"净化除味"}
+        ],
+        "goods":[
+            {"id":0,"name":"水星家纺 全棉斜纹印花四件套被套床单 蓝语谜情 蓝语谜情（床单款） 1.8米床","desc":"家纺","price":469.00,"src":"http://img13.360buyimg.com/babel/s320x320_jfs/t22951/109/1990332636/161372/7f3ec0ac/5b70f2d1Nb7423693.jpg"},
+            {"id":1,"name":"emoi基本生活 自动吸水花盆 玻璃陶瓷水培绿植创意桌面懒人花盆H8106/H8107 小号","desc":"家装软饰","price":49.00,"src":"http://img13.360buyimg.com/babel/s320x320_jfs/t18703/230/1982150080/242041/23d3ef9c/5ae01998Nb9f9fdbc.jpg"},
+            {"id":2,"name":"天马Tenma 抽屉收纳盒XXL 塑料桌面杂物抽屉办公衣物特大号加厚衣柜储物箱内衣衣服玩具整理箱收纳箱储物箱","desc":"收纳用品","price":99.00,"src":"http://img11.360buyimg.com/babel/s320x320_jfs/t20614/192/1451401986/125343/a564cef0/5b28d597N906a6d87.jpg"},
+            {"id":3,"name":"绿之源 6000g360°室内装修安全卫士活性炭包 新房吸去除甲醛清除剂竹炭包净化除味碳包","desc":"净化除味","price":59.00,"src":"http://img13.360buyimg.com/babel/s320x320_jfs/t14893/155/1278351413/341819/8f5d320f/5a4b3399N8c594586.jpg"},
+            {"id":4,"name":"爱丽思IRIS 鞋盒透明鞋盒子抽屉塑料收纳盒前开式可叠加收纳箱整理箱组合装防尘防潮 6个装","desc":"收纳用品","price":138.00,"src":"http://img14.360buyimg.com/babel/s320x320_jfs/t16699/35/1653096779/469680/30496b3c/5ad48f40Na3f5c39a.jpg"},
+            {"id":5,"name":"umbra 你好墙饰 墙面装饰品ins创意北欧家居 客厅卧室3D立体 墙壁金属壁饰字母装饰挂饰 金色","desc":"家装软饰","price":139.00,"src":"http://img10.360buyimg.com/babel/s320x320_jfs/t22552/94/495602691/250581/3a357405/5b32f3deN51c6f4ee.jpg"},
+            {"id":6,"name":"LOVO家纺 罗莱生活出品 凉席三件套可折叠冰丝席提花空调席子 洛伊丝 1.8米床","desc":"家纺","price":119.00,"src":"http://img11.360buyimg.com/babel/s320x320_jfs/t23197/323/638709523/192516/b8e78e68/5b3a2c93N24aba813.jpg"},
+            {"id":7,"name":"Umbra 加拿大 创意可挂墙金属立体菱形相框摆台 欧式相框架装饰摆件画框相框挂墙照片墙 玫瑰金色（一只装） 5x7寸","desc":"家装软饰","price":148,"src":"http://img12.360buyimg.com/babel/s320x320_jfs/t16849/118/1218808631/102522/f1200610/5ac1ba38Ndaa5fdef.jpg"}
+        ]
+    },
+    {
+        "id":2,
+        "name":"食品",
+        "src":"http://img20.360buyimg.com/babel/jfs/t1/41407/36/8454/82906/5d1f06e0E6c12cad1/37d0930cc282c5ee.jpg",
+        "saleInfo":"大额优惠",
+        "children":[
+            {"id":0,"name":"进口零食"},
+            {"id":1,"name":"休闲零食"},
+            {"id":2,"name":"饮料冲调"},
+            {"id":3,"name":"粮油调味"},
+            {"id":4,"name":"茗茶"}
+        ],
+        "goods":[
+            {"id":0,"name":"乐品乐茶 毛尖茶叶绿茶2021新茶雨前特级嫩芽散装春茶礼盒装250g(125g*2罐)","desc":"茗茶","price":99.00,"src":"http://img14.360buyimg.com/babel/s320x320_jfs/t1/188648/19/8970/168327/60cb7f46E019b2d13/c5cde182255f60b6.jpg"},
+            {"id":1,"name":"三只松鼠坚果礼盒9袋装1720g 送礼火红A零食大礼包每日坚果碧根果核桃果干团购礼物","desc":"休闲零食","price":139.00,"src":"http://img11.360buyimg.com/babel/s320x320_jfs/t1/216966/13/1710/382442/61755940E069dcc4b/267d98a97d1cf215.jpg"},
+            {"id":2,"name":"蒙牛 特仑苏有机纯牛奶3.8g蛋白质含量升级  250ml*24 梦幻盖礼盒装","desc":"饮料冲调","price":187.20,"src":"http://img12.360buyimg.com/babel/s320x320_jfs/t1/126709/13/6606/156978/5f06b5f7Eb3f95f98/9b917d4b9a9fc278.jpg"},
+            {"id":3,"name":"爱尚咪咪 虾条 虾味 怀旧好吃零食大礼包 网红休闲小点心糕点（18g*20包）360g/袋","desc":"进口零食","price":9.80,"src":"http://img20.360buyimg.com/babel/s320x320_jfs/t6277/218/1823355660/323342/cdbcaddc/59583a1dN16748a8e.jpg"},
+            {"id":4,"name":"港荣蒸蛋糕 奶香味900g整箱 饼干蛋糕 营养早餐食品 手撕面包口袋吐司 休闲零食小吃","desc":"进口零食","price":39.90,"src":"http://img14.360buyimg.com/babel/s320x320_jfs/t1/219544/33/1867/359445/617663c2E4775ea3d/f8e4b852b06f799e.jpg"},
+            {"id":5,"name":"楼兰蜜语 精选一等五星和田红枣500g*2袋  蜜饯果干 新疆特产  和田大枣可夹核桃 精选新疆大枣 量贩装零食","desc":"休闲零食","price":43.90,"src":"http://img14.360buyimg.com/babel/s320x320_jfs/t1/124772/27/6447/260323/5f03d348E6faf78f9/0c88b806ae51ad9f.jpg"},
+            {"id":6,"name":"雀巢 Nestle 速溶咖啡 醇品速溶咖啡桶醇500g 可冲277杯 无蔗糖 黑咖啡 冲调饮品","desc":"饮料冲调","price":89.90,"src":"http://img12.360buyimg.com/babel/s320x320_jfs/t1/136482/16/22618/133121/6142d826E5fcc1834/7bec4cb1488cd2fc.jpg"},
+            {"id":7,"name":"福临门 面粉 家宴小麦粉 包子馒头饺子 面粉 中粮出品 10kg","desc":"粮油调味","price":42.90,"src":"http://img30.360buyimg.com/babel/s320x320_jfs/t1/180357/18/11411/74142/60dae8bcE977072df/32f4f36efe987542.jpg"}
+        ]
+    },
+    {
+        "id":3,
+        "name":"服饰",
+        "src":"http://img13.360buyimg.com/babel/s1900x980_jfs/t1/210483/39/6070/437423/616fbb67E6cb8c292/f7cf020854752c2b.jpg",
+        "saleInfo":"买一送一",
+        "children":[
+            {"id":0,"name":"T恤"},
+            {"id":1,"name":"卫衣"},
+            {"id":2,"name":"衬衫"},
+            {"id":3,"name":"裤装"},
+            {"id":4,"name":"夹克"}
+        ],
+        "goods":[
+            {"id":0,"name":"PSO Brand周深同款小熊圆领长袖T恤男宽松2020新款潮牌打底衫上衣 黑色 M","desc":"T恤","price":209.00,"src":"http://img10.360buyimg.com/babel/s320x320_jfs/t1/148977/2/5786/314205/5f3b8a04E588435ba/50b12d1982549576.jpg"},
+            {"id":1,"name":"ecko犀牛休闲裤男春秋季新款撞色条纹懒人排扣百搭直筒裤潮流嘻哈长裤 黑色 L","desc":"裤装","price":309.00,"src":"http://img30.360buyimg.com/babel/s320x320_jfs/t1/107221/31/20261/231526/616ee81bE6cd83613/0a0bdb46337e6a93.jpg"},
+            {"id":2,"name":"佐丹奴男装佐丹奴男装复合摇粒绒可拆帽反光袖章夹克外套01070613 92白灰 小码","desc":"夹克","price":339.00,"src":"http://img20.360buyimg.com/babel/s320x320_jfs/t1/161096/26/21604/58074/61763cd5E81fe76dc/76490b89e84db556.jpg"},
+            {"id":3,"name":"Navigare意大利小帆船衬衫男长袖格子2021秋季高级休闲衬衣 藏青/红 L/40","desc":"衬衫","price":517.00,"src":"http://img14.360buyimg.com/babel/s320x320_jfs/t1/204216/38/12789/177167/6176d4fbE7062b653/1da5bb1f74c6db93.jpg"},
+            {"id":4,"name":"Hush Puppies暇步士2021春新男装复古格子休闲长袖衬衫|PA-21156D 075深蓝1 L","desc":"衬衫","price":659.00,"src":"http://img11.360buyimg.com/babel/s320x320_jfs/t1/197353/30/14275/229203/6172f46aE3467aa67/212acbc063247e39.jpg"},
+            {"id":5,"name":"Dangerouspeople 薛之谦dsp白色贴布绣兔子颗粒绒拉链带帽卫衣 米色 L","desc":"卫衣","price":389.00,"src":"http://img12.360buyimg.com/babel/s320x320_jfs/t1/199241/20/13578/222619/616e9aa8Ee47dca96/f096a9ff74722a9a.jpg"},
+            {"id":6,"name":"Lilbetter情侣卫衣春季涂鸦印花上衣男女同款卫衣潮 白色 170/M","desc":"卫衣","price":143.00,"src":"http://img30.360buyimg.com/babel/s320x320_jfs/t1/158543/10/25038/188625/617668cfEa8387dc3/a51a52535398d9a8.jpg"},
+            {"id":7,"name":"VIISHOW2021夏季新品短袖T恤 男士港风city boy圆领短T打底情侣装 白色 M","desc":"T恤","price":109.00,"src":"http://img30.360buyimg.com/babel/s320x320_jfs/t1/222207/3/53/161756/6176e59dE33665d40/cc63747486331819.jpg"}
+        ]
+    }
+]
