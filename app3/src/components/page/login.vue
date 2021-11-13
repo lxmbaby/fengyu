@@ -33,10 +33,9 @@ export default {
     const store=useStore();
     const router=useRouter();
     let onLogin=()=>{
-      store.dispatch('getUser',{account:user.account,password:user.password});
-      if(store.state.profile){
+      store.dispatch('user/getUser',{account:user.account,password:user.password});
+      if(store.state.user.profile){
         router.push("/firstpage")
-        
       }
     }
     return{user,onLogin}

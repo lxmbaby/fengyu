@@ -28,11 +28,11 @@ export default {
     setup(){
         const store=useStore()
         let profile=computed(()=>{
-            return store.state.profile;
+            return store.state.user.profile;
         })
         console.log(profile)
         let outLogin=()=>{
-            store.commit('setData');
+            store.commit('user/setData');
         }
         return{profile,outLogin}
     }

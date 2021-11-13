@@ -1,19 +1,12 @@
 import { createStore } from "vuex";
-import { list, user } from "@/api/setlist.js";
+import { list } from "@/api/setlist.js";
+import user from "@/store/module/user.js";
+import createPersistedState from "vuex-persistedstate";
 export default createStore({
   state: {
-    profile: [],
     goodList: [],
   },
   mutations: {
-    setData(state) {
-      state.profile = [];
-    },
-    setUser(state, payload) {
-      console.log(payload);
-      state.profile = payload;
-      console.log(state.profile);
-    },
     setlist(state, payload) {
       state.goodList = payload;
     },
@@ -27,12 +20,6 @@ export default createStore({
     },
   },
   actions: {
-    async getUser({ commit }, { account, password }) {
-      console.log(account, password);
-      let users = await user(account, password);
-      console.log(users);
-      commit("setUser", users);
-    },
     async getlist({ commit }) {
       let goodlist = await list();
       goodlist.forEach((item) => {
@@ -42,5 +29,14 @@ export default createStore({
       commit("setlist", goodlist);
     },
   },
-  modules: {},
+  modules: { user },
+  plugins: [
+    //配置插件
+    createPersistedState({
+      //本地存储的名字
+      key: "fengyu",
+      //指定要存储的模块
+      paths: ["user"],
+    }),
+  ],
 });
