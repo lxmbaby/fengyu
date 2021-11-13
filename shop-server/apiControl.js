@@ -6,9 +6,9 @@ class AccountConfig {
   //登录请求
   async login(request, response, next) {
     //传入两个参数
-    let params = [request.body.name, request.body.password];
+    let params = [request.body.account, request.body.password];
     let loginsql =
-      "SELECT `r-name`,`r-password`,`r-identity` FROM `userregister` WHERE `r-name`=? AND `r-password`=? AND `r-state`=1;";
+      "SELECT * FROM `shopuser` WHERE `account`=? AND `password`=? AND `state`=1;";
     try {
       let result = await db.exss(loginsql, params);
       console.log(result);

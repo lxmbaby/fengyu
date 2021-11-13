@@ -2,14 +2,14 @@
   <div class="topnav">
       <div class="container">
           <ul>
-              <!-- <template v-if="profile.token"> -->
-                    <li><a href="javascript:;"><i class="iconfont icon-user"></i>已登录</a></li>
-                    <li><a href="javascript:;">退出登录</a></li>
-              <!-- </template>
-              <template v-else> -->
+              <template v-if="profile.token">
+                    <li><a href="javascript:;"><i class="iconfont icon-user"></i>{{profile.name}}</a></li>
+                    <li><a href="javascript:;" @click="outLogin">退出登录</a></li>
+              </template>
+              <template v-else>
                     <li><a href="login">请先登录</a></li>
                     <li><a href="javascript:;">免费注册</a></li>
-              <!-- </template> -->
+              </template>
               <li><a href="javascript:;">我的订单</a></li>
               <li><a href="javascript:;">会员中心</a></li>
               <li><a href="javascript:;">帮助中心</a></li>
@@ -21,14 +21,21 @@
 </template>
 
 <script>
-// import { useStore } from 'vuex'
+import { computed } from 'vue'
+import { useStore } from 'vuex'
 export default {
     name:"Topnav",
-    // setup(){
-    //     const store=useStore()
-    //     let profile=store.state.profile
-    //     return{profile}
-    // }
+    setup(){
+        const store=useStore()
+        let profile=computed(()=>{
+            return store.state.profile;
+        })
+        console.log(profile)
+        let outLogin=()=>{
+            store.commit('setData');
+        }
+        return{profile,outLogin}
+    }
 }
 </script>
 

@@ -1,19 +1,18 @@
 import { createStore } from "vuex";
-import { list } from "@/api/setlist.js";
+import { list, user } from "@/api/setlist.js";
 export default createStore({
   state: {
-    profile: {
-      id: "",
-      username: "",
-      account: "",
-      mobile: "",
-      token: "",
-    },
+    profile: [],
     goodList: [],
   },
   mutations: {
+    setData(state) {
+      state.profile = [];
+    },
     setUser(state, payload) {
+      console.log(payload);
       state.profile = payload;
+      console.log(state.profile);
     },
     setlist(state, payload) {
       state.goodList = payload;
@@ -28,10 +27,11 @@ export default createStore({
     },
   },
   actions: {
-    async getUser({ commit }, name, password) {
-      let user = await user(name, password);
-      console.log(user);
-      commit("setUser", user);
+    async getUser({ commit }, { account, password }) {
+      console.log(account, password);
+      let users = await user(account, password);
+      console.log(users);
+      commit("setUser", users);
     },
     async getlist({ commit }) {
       let goodlist = await list();

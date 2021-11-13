@@ -1,10 +1,11 @@
 import axios from "axios";
 //获取用户登录信息
-export const user = async (name, password) => {
-  const { data: res } = await axios.post("/shopping/user", {
-    name: name,
+export const user = async (account, password) => {
+  const { data: res } = await axios.post("/shopping/login", {
+    account: account,
     password: password,
   });
+  res.data.token = res.token;
   console.log(res);
   return res.data;
 };

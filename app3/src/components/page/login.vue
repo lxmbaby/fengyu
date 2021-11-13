@@ -4,7 +4,7 @@
     <form>
       <div class="form-group">
         <label for="usename">账号:</label>
-        <input type="text" class="form-control" id="usename" placeholder="请输入账号" v-model.trim="user.useword">
+        <input type="text" class="form-control" id="usename" placeholder="请输入账号" v-model.trim="user.account">
       </div>
       <div class="form-group">
         <label for="usenamePassword">密码:</label>
@@ -20,17 +20,24 @@
 
 <script>
 import { useStore } from 'vuex'
+import {useRouter} from 'vue-router'
 import {reactive} from "vue"
 export default {
     name:'login',
     setup(){
     let user=reactive({
-      useword:'',
+      account:'',
       password:''
     });
-    const store=useStore()
+    console.log(user.account,user.password)
+    const store=useStore();
+    const router=useRouter();
     let onLogin=()=>{
-      store.dispatch('getUser',"useword","password");
+      store.dispatch('getUser',{account:user.account,password:user.password});
+      if(store.state.profile){
+        router.push("/firstpage")
+        
+      }
     }
     return{user,onLogin}
     }
