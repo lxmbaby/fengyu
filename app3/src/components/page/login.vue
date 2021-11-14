@@ -1,27 +1,30 @@
 <template>
 <!-- 登录页面组件 -->
   <div class="content">
-    <form>
-      <div class="form-group">
-        <label for="usename">账号:</label>
-        <input type="text" class="form-control" id="usename" placeholder="请输入账号" v-model.trim="user.account">
-      </div>
-      <div class="form-group">
-        <label for="usenamePassword">密码:</label>
-        <input type="password" class="form-control" id="usenamePassword" placeholder="请输入密码" v-model.trim="user.password">
-      </div>
-      <div class="from-button">
-        <button type="button" class="btn btn-primary">注册</button>
-        <button type="button" class="btn btn-primary" @click="onLogin">登录</button>
-      </div> 
-    </form> 
+    <button class="back"><a href="/">返回首页</a></button>
+    <div class="logo">
+      <img src="@/assets/image/logo.png" alt="枫遇">
+    </div>
+    <el-form :model="user" :rules="rules" class="form" ref="formData">
+          <el-form-item label="账号" prop="account" autocomplete="off" class="form-group">
+            <el-input v-model="user.account"></el-input>
+          </el-form-item>
+          <el-form-item label="密码" prop="password" class="form-group">
+              <el-input v-model="user.password"></el-input> 
+          </el-form-item>
+        </el-form>
+        <div class="from-button">
+            <button type="button" class="btn">重置</button>
+            <button type="button" class="btn" @click="onLogin">登录</button>
+        </div>
   </div>
 </template>
 
 <script>
 import { useStore } from 'vuex'
 import {useRouter} from 'vue-router'
-import {reactive} from "vue"
+import {computed, reactive,ref} from "vue"
+import { ElMessageBox} from 'element-plus'
 export default {
     name:'login',
     setup(){
@@ -32,14 +35,43 @@ export default {
     console.log(user.account,user.password)
     const store=useStore();
     const router=useRouter();
+    //校验规则
+        let rules = reactive({
+        account: [
+            { required: true, message: "请输入账号", trigger: "blur" },
+            { min: 6, max: 6, message: "请输入 6 位数字", trigger: "blur" },
+        ],
+        password: [
+            { required: true, message: "请输入密码", trigger: "blur" },
+            { min: 6, max: 6, message: "请输入6位数字", trigger: "blur" },
+        ],
+        })
+    let formData=ref(null)
     let onLogin=()=>{
       store.dispatch('user/getUser',{account:user.account,password:user.password});
-      if(store.state.user.profile){
-        router.push("/firstpage")
-      }
+      let token=computed(()=>{
+        return store.state.user.profile.token
+      })
+      formData.value.validate((valid) => {
+         if (valid) {
+          if(token.value){
+            router.push("/firstpage")
+          }
+        }else{
+            ElMessageBox.confirm(
+               `账号或密码错误或者没有按照指示输入`,
+               '登录提示',
+                {
+                   confirmButtonText: '好的',
+                   cancelButtonText: '取消',
+                   type: 'error',
+                }
+            )
+          }    
+      })
     }
-    return{user,onLogin}
-    }
+    return{user,rules,formData,onLogin}
+  }
 }
 </script>
 
@@ -50,33 +82,58 @@ export default {
     left: 50%;
     transform: translate(-50%,-50%);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height:280px;
+    width: 620px;
+    height:450px;
     background: rgb(141, 137, 137);
-  }
-  label{
-    padding: 7px;
-    margin-top: 7px;
+    border-radius: 3px;
+    .back{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 70px;
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+        background: #fff;
+        a{
+            text-decoration: none;
+        }
+    }
+    .logo{
+      width: 70%;
+      height: 120px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
   .form-group{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 350px;
-  }
-  .form-control{
-    width: 300px;
-  }
-  form{
-    position: relative;
+    padding: 10px 0;
   }
   .from-button{
     position: absolute;
-    right: 0;
+    bottom: 23px;
+    right: 27px;
     display: flex;
     justify-content: space-between;
     width: 130px;
+    .btn{
+      width: 55px;
+      height: 35px;
+      background: cyan;
+      border: none;
+      border-radius: 3px;
+      &:hover{
+        color: #fff;
+      }
+    }
   }
 </style>

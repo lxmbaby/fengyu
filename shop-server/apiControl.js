@@ -1,6 +1,6 @@
 //引入处理mysql的文件
 const db = require("./mysql.js");
-// const moment = require("moment");
+const moment = require("moment");
 const jwt = require("jwt-simple");
 class AccountConfig {
   //登录请求
@@ -34,6 +34,41 @@ class AccountConfig {
           },
           require("./config/index").tokenKey
         );
+      }
+    } catch (err) {
+      response.json({
+        code: -200,
+        msg: "服务器异常",
+        err,
+      });
+    }
+  }
+  //注册请求
+  async register(request, response, next) {
+    let insertsql =
+      "INSERT INTO `shopuser`(`name`,`password`,`account`,`time`) VALUES (?,?,?,?);";
+    //传入两个参数
+    let params = [
+      request.body.name,
+      request.body.password,
+      request.body.account,
+      moment().format("YYYY-MM-DD HH:mm:ss"), //通过moment包自动获取到当前时间
+    ];
+    console.log(params);
+    try {
+      let result = await db.exss(insertsql, params);
+      console.log(result);
+      if (result && result.affectedRows >= 1) {
+        response.json({
+          code: 200,
+          data: result,
+          msg: "注册成功！",
+        });
+      } else {
+        response.json({
+          code: -200,
+          msg: "注册失败！",
+        });
       }
     } catch (err) {
       response.json({

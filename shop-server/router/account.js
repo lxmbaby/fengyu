@@ -3,6 +3,7 @@ const express = require("express");
 let router = express.Router();
 //相当于二级路由
 router.post("/login", require("../apiControl.js").login);
+router.post("/register", require("../apiControl.js").register);
 router.post("/goodlist", require("../apiControl.js").goodlist);
 router.post("/carousel", require("../apiControl.js").carousel);
 router.post("/new", require("../apiControl.js").new);
