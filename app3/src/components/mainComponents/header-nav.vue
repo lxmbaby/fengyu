@@ -2,13 +2,13 @@
 <!-- 商品分类导航组件 -->
   <div class="header-nav">
     <ul>
-      <li><router-link to="firstpage" class="linkstyle">首页</router-link></li>
+      <li><router-link to="/" class="linkstyle">首页</router-link></li>
       <li v-for="item in $store.state.goodList" :key='item.gid' @mouseenter="show(item)" @mouseleave="hide(item)">
-        <router-link @click="hide(item)" to="good" class="linkstyle">{{item.gname}}</router-link>
+        <router-link @click="hide(item)" :to="'/firstClass/'+item.gid" class="linkstyle">{{item.gname}}</router-link>
         <div class="layer"  v-show="item.open">
           <ul>
             <li v-for="sub in item.children" :key='sub.sid'>
-               <router-link @click="hide(item)" to="/" class="linkstyle">{{sub.sname}}</router-link>
+               <router-link @click="hide(item)" :to="'/secondClass/'+sub.sid" class="linkstyle">{{sub.sname}}</router-link>
             </li>
           </ul>
         </div>

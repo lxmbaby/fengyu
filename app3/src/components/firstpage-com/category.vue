@@ -3,9 +3,9 @@
   <div class="category">
       <ul class="menu">
           <li v-for="item in menulist" :key="item.gid"  @mouseenter="listen(item.gid)">
-              <router-link to="/">{{item.gname}}</router-link>
+              <router-link :to="'/firstClass/'+item.gid">{{item.gname}}</router-link>
               <template v-if="item.children">
-                <router-link to="/" v-for="sub in item.children" :key="sub.sid">{{sub.sname}}</router-link>
+                <router-link :to="'/secondClass/'+sub.sid" v-for="sub in item.children" :key="sub.sid">{{sub.sname}}</router-link>
               </template>
           </li>
       </ul>

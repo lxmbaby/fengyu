@@ -43,7 +43,6 @@ components:{Category,Banner,New,Hot,Brand,Product,Special}
     width: 75%;
     min-width: 773px;
     margin: 0 auto;
-    // background: cyan;
   }
 }
 </style>>
