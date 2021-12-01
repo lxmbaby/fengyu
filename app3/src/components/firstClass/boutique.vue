@@ -30,23 +30,28 @@ export default {
     props:['bid'],
     setup(props){
       let store=useStore();
+      //拿到传过来的一级类的id
       let l=toRef(props,"bid")
       let bou=computed(()=>{
         return store.state.firstClass.bouList[l.value-1]
       })
       let index=ref(1)
+      //接收用户点击精品区类传过来的对应id，进行对应类的展示
       let change=(id)=>{
         index.value=id;
         let show=bou.value.find(item=>item.id===index.value)
         show.open=true;
       }
+      //监控用户点击精品区的类，改变则隐藏上一个打开的类
       watch(index,(newValue,oldValue)=>{
         let hidedown=bou.value.find(item=>item.id===oldValue)
         hidedown.open=false;
       })
+      //监控用户点击的一级类，重置精品区选择的类
       watch(l,(newValue,oldValue)=>{
         index.value=1
       })
+      //获取到当前一级类下精品区的数据
       let select=computed(()=>{
        return bou.value.find(item=>item.id===index.value)
       })
