@@ -26,8 +26,8 @@
 </template>
 
 <script>
-import Panel from "@/components/firstpage-com/panel.vue"
-import Good from "@/components/firstpage-com/good.vue"
+import Panel from "@/components/firstpage/panel.vue"
+import Good from "@/components/firstpage/good.vue"
 import {goods} from "@/api/setlist.js"
 import {DataLazy} from "@/hooks/index.js"
 export default {

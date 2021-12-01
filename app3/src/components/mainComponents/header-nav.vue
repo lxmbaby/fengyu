@@ -3,12 +3,12 @@
   <div class="header-nav">
     <ul>
       <li><router-link to="/" class="linkstyle">首页</router-link></li>
-      <li v-for="item in $store.state.goodList" :key='item.gid' @mouseenter="show(item)" @mouseleave="hide(item)">
-        <router-link @click="hide(item)" :to="'/firstClass/'+item.gid" class="linkstyle">{{item.gname}}</router-link>
+      <li v-for="item in goodList" :key='item.gid' @mouseenter="show(item)" @mouseleave="hide(item)">
+        <router-link @click="hide(item)" :to="`/firstClass/${item.gid}`" class="linkstyle">{{item.gname}}</router-link>
         <div class="layer"  v-show="item.open">
           <ul>
             <li v-for="sub in item.children" :key='sub.sid'>
-               <router-link @click="hide(item)" :to="'/secondClass/'+sub.sid" class="linkstyle">{{sub.sname}}</router-link>
+               <router-link @click="hide(item)" :to="`/secondClass/${sub.sid}`" class="linkstyle">{{sub.sname}}</router-link>
             </li>
           </ul>
         </div>
@@ -18,21 +18,25 @@
 </template>
 
 <script>
+import { computed } from '@vue/reactivity';
 import {useStore} from 'vuex'
 export default {
   name: "headerNav",
   setup(){
     let store=useStore()
     //通过dispatch调用vuex中actions的getlist方法
-    store.dispatch('getlist');
+    store.dispatch('nav/getlist');
+    let goodList=computed(()=>{
+      return store.state.nav.goodList
+    })
     let show=(item)=>{
-      store.commit('show', item.gid);
+      store.commit('nav/show', item.gid);
     }
     let hide=(item)=>{
-      store.commit('hide', item.gid);
+      store.commit('nav/hide', item.gid);
     }
     return{
-      show,hide
+      show,hide,goodList
     }
   }
 };

@@ -61,7 +61,7 @@ export default {
            ]
        })
        let menulist=computed(()=>{
-           let list=store.state.goodList.map(item=>{
+           let list=store.state.nav.goodList.map(item=>{
                return{
                    gid:item.gid,
                    gname:item.gname,
@@ -81,7 +81,7 @@ export default {
            return menulist.value.find(item=>item.gid===selectId.value)
        })
        
-
+        console.log(selectgood)
        return{
            menulist,listen,selectgood
        }

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Topnav from "@/components/firstpage-com/topnav.vue"
+import Topnav from "@/components/firstpage/topnav.vue"
 import Header from "@/components/mainComponents/header.vue"
 import Footer from "@/components/mainComponents/footer.vue"
 import HeaderSticknav from "@/components/mainComponents/header-sticknav.vue"

@@ -24,9 +24,9 @@
 </template>
 
 <script>
-import Panel from "@/components/firstpage-com/panel.vue"
+import Panel from "@/components/firstpage/panel.vue"
 import {hotList} from "@/api/setlist.js"
-import Skeleton from "@/components/firstpage-com/skeleton.vue"
+import Skeleton from "@/components/firstpage/skeleton.vue"
 import {DataLazy} from "@/hooks/index.js"
 export default {
     name:"Hot",

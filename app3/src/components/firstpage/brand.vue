@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Panel from "@/components/firstpage-com/panel.vue"
+import Panel from "@/components/firstpage/panel.vue"
 import {brandList} from "@/api/setlist.js"
 import {DataLazy} from "@/hooks/index.js"
 import {ref} from 'vue'

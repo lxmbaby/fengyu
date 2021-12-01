@@ -56,12 +56,12 @@
         "gname":"家电",
         "children":[
             {"sid":1,"sname":"电视"},
-            {"sid":2,"sname":"空调"},
+            {"sid":2,"sname":"生活电器"},
             {"sid":3,"sname":"洗衣机"},
             {"sid":4,"sname":"冰箱"},
             {"sid":5,"sname":"厨卫大电"},
             {"sid":6,"sname":"厨房小电"},
-            {"sid":7,"sname":"生活电器"},
+            {"sid":7,"sname":"空调"},
             {"sid":8,"sname":"个护健康"},
             {"sid":9,"sname":"视听影音"}
         ],
@@ -134,12 +134,12 @@
         "gname":"宠花",
         "children":[
             {"sid":1,"sname":"狗狗"},
-            {"sid":2,"sname":"猫咪"},
+            {"sid":2,"sname":"创意礼品"},
             {"sid":3,"sname":"水族"},
             {"sid":4,"sname":"宠物服务"},
             {"sid":5,"sname":"鲜花"},
             {"sid":6,"sname":"农资园艺"},
-            {"sid":7,"sname":"创意礼品"},
+            {"sid":7,"sname":"猫咪"},
             {"sid":8,"sname":"工艺礼品"},
             {"sid":9,"sname":"礼品文具"}
         ],

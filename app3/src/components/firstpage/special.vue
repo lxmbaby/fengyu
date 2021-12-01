@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import Panel from "@/components/firstpage-com/panel.vue"
+import Panel from "@/components/firstpage/panel.vue"
 import {special} from "@/api/setlist.js"
 import {DataLazy} from "@/hooks/index.js"
 export default {

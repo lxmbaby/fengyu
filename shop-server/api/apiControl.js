@@ -1,5 +1,5 @@
 //引入处理mysql的文件
-const db = require("./mysql.js");
+const db = require("../mysql.js");
 const moment = require("moment");
 const jwt = require("jwt-simple");
 class AccountConfig {
@@ -32,7 +32,7 @@ class AccountConfig {
             exp: Date.now() + 1000 * 60 * 60 * 24,
             info: data,
           },
-          require("./config/index").tokenKey
+          require("../config/index").tokenKey
         );
       }
     } catch (err) {
@@ -81,7 +81,7 @@ class AccountConfig {
   //请求类目
   goodlist(request, response, next) {
     try {
-      let result = require("./json/nav.json");
+      let result = require("../json/nav.json");
       console.log(result);
       if (result && result.length >= 1) {
         response.send({
@@ -106,7 +106,7 @@ class AccountConfig {
   //请求轮播图图片
   carousel(request, response, next) {
     try {
-      let result = require("./json/carousel.json");
+      let result = require("../json/carousel.json");
       console.log(result);
       if (result && result.length >= 1) {
         response.send({
@@ -131,7 +131,7 @@ class AccountConfig {
   // 请求新鲜好物图片
   new(request, response, next) {
     try {
-      let result = require("./json/new.json");
+      let result = require("../json/new.json");
       console.log(result);
       if (result && result.length >= 1) {
         response.send({
@@ -156,7 +156,7 @@ class AccountConfig {
   // 请求人气推荐图片
   hot(request, response, next) {
     try {
-      let result = require("./json/hot.json");
+      let result = require("../json/hot.json");
       console.log(result);
       if (result && result.length >= 1) {
         response.send({
@@ -181,7 +181,7 @@ class AccountConfig {
   //请求热门品牌图片
   brand(request, response, next) {
     try {
-      let result = require("./json/brand.json");
+      let result = require("../json/brand.json");
       console.log(result);
       if (result && result.length >= 1) {
         response.send({
@@ -206,7 +206,7 @@ class AccountConfig {
   //请求商品展示模块数据
   goods(request, response, next) {
     try {
-      let result = require("./json/good.json");
+      let result = require("../json/good.json");
       console.log(result);
       if (result && result.length >= 1) {
         response.send({
@@ -231,7 +231,7 @@ class AccountConfig {
   //请求最新专题数据
   special(request, response, next) {
     try {
-      let result = require("./json/special.json");
+      let result = require("../json/special.json");
       console.log(result);
       if (result && result.length >= 1) {
         response.send({

@@ -2,9 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import Layout from "@/components/page/layout.vue";
 import Login from "@/components/page/login.vue";
 import Rejister from "@/components/page/register.vue";
-import Firstpage from "@/components/firstnav/firstpage.vue";
-import firstClass from "@/components/firstnav/firstClass.vue";
-import secondClass from "@/components/firstnav/secondClass.vue";
+import Firstpage from "@/components/nav/firstpage.vue";
+import firstClass from "@/components/nav/firstClass.vue";
+import secondClass from "@/components/nav/secondClass.vue";
 const routes = [
   {
     path: "/",

@@ -21,13 +21,13 @@
 </template>
 
 <script>
-import Category from "@/components/firstpage-com/category.vue"
-import Banner from "@/components/firstpage-com/banner.vue"
-import New from "@/components/firstpage-com/new.vue"
-import Hot from "@/components/firstpage-com/hot.vue"
-import Brand from "@/components/firstpage-com/brand.vue"
-import Product from "@/components/firstpage-com/product.vue"
-import Special from "@/components/firstpage-com/special.vue"
+import Category from "@/components/firstpage/category.vue"
+import Banner from "@/components/firstpage/banner.vue"
+import New from "@/components/firstpage/new.vue"
+import Hot from "@/components/firstpage/hot.vue"
+import Brand from "@/components/firstpage/brand.vue"
+import Product from "@/components/firstpage/product.vue"
+import Special from "@/components/firstpage/special.vue"
 export default {
 name:"Firstpage",
 components:{Category,Banner,New,Hot,Brand,Product,Special}
