@@ -1,6 +1,8 @@
 //引入处理mysql的文件
 const db = require("../mysql.js");
+//引入获取当前时间的包
 const moment = require("moment");
+//引入token的编码解码模块包
 const jwt = require("jwt-simple");
 class AccountConfig {
   //登录请求
@@ -13,11 +15,11 @@ class AccountConfig {
       let result = await db.exss(loginsql, params);
       console.log(result);
       if (result && result.length >= 1) {
+        result[0].token = createToken(result[0]);
         response.json({
           code: 200,
           data: result[0],
           msg: "登录成功！",
-          token: createToken(result[0]),
         });
       } else {
         response.json({
@@ -46,12 +48,14 @@ class AccountConfig {
   //注册请求
   async register(request, response, next) {
     let insertsql =
-      "INSERT INTO `shopuser`(`name`,`password`,`account`,`time`) VALUES (?,?,?,?);";
+      "INSERT INTO `shopuser`(`name`,`password`,`account`,`address`,`phone`,`time`) VALUES (?,?,?,?,?,?);";
     //传入两个参数
     let params = [
       request.body.name,
       request.body.password,
       request.body.account,
+      request.body.address,
+      request.body.phone,
       moment().format("YYYY-MM-DD HH:mm:ss"), //通过moment包自动获取到当前时间
     ];
     console.log(params);
@@ -68,6 +72,35 @@ class AccountConfig {
         response.json({
           code: -200,
           msg: "注册失败！",
+        });
+      }
+    } catch (err) {
+      response.json({
+        code: -200,
+        msg: "服务器异常",
+        err,
+      });
+    }
+  }
+  //重置请求
+  async reset(request, response, next) {
+    let insertsql = "UPDATE `shopuser` SET `password`=? WHERE account=?";
+    //传入两个参数
+    let params = [request.body.password, request.body.account];
+    console.log(params);
+    try {
+      let result = await db.exss(insertsql, params);
+      console.log(result);
+      if (result && result.affectedRows >= 1) {
+        response.json({
+          code: 200,
+          data: result,
+          msg: "重置成功！",
+        });
+      } else {
+        response.json({
+          code: -200,
+          msg: "重置失败！",
         });
       }
     } catch (err) {
